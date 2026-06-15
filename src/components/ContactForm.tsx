@@ -85,20 +85,6 @@ const ContactForm = () => {
                 </div>
               </div>
             </div>
-            
-            <div className="mt-12 pt-12 border-t border-blue-500">
-              <p className="text-blue-100 mb-4 font-medium uppercase tracking-wider text-xs">Hours of Operation</p>
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                <div>
-                  <p className="font-bold">Mon - Fri</p>
-                  <p>8:00 AM - 6:00 PM</p>
-                </div>
-                <div>
-                  <p className="font-bold">Sat</p>
-                  <p>9:00 AM - 4:00 PM</p>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Form */}
