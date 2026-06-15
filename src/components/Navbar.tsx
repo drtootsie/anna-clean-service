@@ -40,14 +40,18 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-blue-600 ${scrolled ? 'text-gray-700' : 'text-gray-900'}`}
+                className={`text-sm font-semibold transition-colors hover:text-blue-400 ${scrolled ? 'text-gray-700' : 'text-white shadow-sm'}`}
               >
                 {link.name}
               </a>
             ))}
             <a
               href="tel:9137317373"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 shadow-sm transition-all"
+              className={`inline-flex items-center px-4 py-2 border-2 text-sm font-bold rounded-md transition-all shadow-sm ${
+                scrolled 
+                ? 'bg-blue-600 border-blue-600 text-white hover:bg-blue-700' 
+                : 'bg-white/10 border-white text-white hover:bg-white hover:text-blue-600'
+              }`}
             >
               <Phone className="w-4 h-4 mr-2" />
               (913) 731-7373
@@ -58,7 +62,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`inline-flex items-center justify-center p-2 rounded-md ${scrolled ? 'text-gray-700' : 'text-gray-900'} hover:text-blue-600 focus:outline-none`}
+              className={`inline-flex items-center justify-center p-2 rounded-md ${scrolled ? 'text-gray-700' : 'text-white'} hover:text-blue-400 focus:outline-none`}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
