@@ -157,10 +157,10 @@ const Checklist = () => {
 
             <div className="mt-8 pt-6 border-t border-gray-200 text-center">
               <a
-                href="#contact"
+                href="#contact-standard"
                 className="inline-flex w-full items-center justify-center px-6 py-3 rounded-xl border-2 border-gray-300 font-bold text-gray-800 hover:bg-gray-200 transition-colors text-sm"
               >
-                Choose Standard Clean
+                Build Standard Clean Estimate ↓
               </a>
             </div>
           </div>
@@ -204,10 +204,10 @@ const Checklist = () => {
 
             <div className="mt-8 pt-6 border-t border-blue-200 text-center">
               <a
-                href="#contact"
+                href="#contact-deep"
                 className="inline-flex w-full items-center justify-center px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-colors text-sm shadow-md"
               >
-                Choose Deep Clean
+                Build Deep Clean Estimate ↓
               </a>
             </div>
           </div>

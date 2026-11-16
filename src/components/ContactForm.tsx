@@ -67,6 +67,19 @@ const ContactForm = () => {
   const [selectedAddons, setSelectedAddons] = useState<string[]>([]);
   const [preferredTime, setPreferredTime] = useState('morning');
   const [preferredDate, setPreferredDate] = useState('');
+
+  React.useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash.toLowerCase();
+      if (hash.includes('standard')) setService('standard');
+      else if (hash.includes('deep')) setService('deep');
+      else if (hash.includes('move')) setService('move');
+      else if (hash.includes('organize')) setService('organize');
+    };
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
   
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
@@ -218,32 +231,27 @@ const ContactForm = () => {
                 
                 {/* Step 1: Select Service */}
                 <div>
-                  <label className="block text-sm font-bold uppercase tracking-wider text-gray-700 mb-4 flex items-center">
+                  <label className="block text-sm font-bold uppercase tracking-wider text-gray-700 mb-3 flex items-center">
                     <span className="flex items-center justify-center h-6 w-6 rounded-full bg-blue-600 text-white text-xs mr-2 font-mono">1</span>
-                    Choose Cleaning Service
+                    Selected Service
                   </label>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                     {SERVICE_TYPES.map((item) => {
                       const isSelected = service === item.id;
                       return (
-                        <div
+                        <button
+                          type="button"
                           key={item.id}
                           onClick={() => setService(item.id)}
-                          className={`cursor-pointer rounded-2xl p-4 border-2 transition-all relative ${
+                          className={`p-3 rounded-2xl border-2 text-center transition-all ${
                             isSelected 
-                              ? 'border-blue-600 bg-blue-50/50 shadow-sm' 
-                              : 'border-gray-200 hover:border-gray-300 bg-white'
+                              ? 'border-blue-600 bg-blue-50 text-blue-900 font-bold shadow-sm' 
+                              : 'border-gray-200 hover:border-gray-300 bg-white text-gray-700 font-medium'
                           }`}
                         >
-                          <div className="flex justify-between items-start mb-1">
-                            <span className="font-bold text-gray-900 text-base">{item.name}</span>
-                            {isSelected && <Check className="w-5 h-5 text-blue-600" />}
-                          </div>
-                          <span className="inline-block text-[11px] font-semibold text-blue-700 bg-blue-100/70 px-2 py-0.5 rounded-full mb-2">
-                            {item.badge}
-                          </span>
-                          <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
-                        </div>
+                          <div className="text-sm font-bold">{item.name}</div>
+                          <div className="text-[10px] text-blue-600 font-semibold mt-0.5">{item.badge}</div>
+                        </button>
                       );
                     })}
                   </div>

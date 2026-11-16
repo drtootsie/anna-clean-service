@@ -21,11 +21,11 @@ export default function Home() {
       <div id="checklist">
         <Checklist />
       </div>
+      <ContactForm />
       <Gallery />
       <Testimonials />
       <ServiceAreas />
       <FAQ />
-      <ContactForm />
       <Footer />
       <FloatingCallBar />
     </main>
