@@ -31,8 +31,13 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           
           {/* Logo */}
-          <a href="#" className="flex-shrink-0 flex items-center space-x-2">
-            <span className={`text-2xl font-black tracking-tight ${scrolled ? 'text-blue-600' : 'text-white drop-shadow-md'}`}>
+          <a href="#" className="flex-shrink-0 flex items-center space-x-3">
+            <img 
+              src="/gallery/nextdoor/logo.jpeg" 
+              alt="Anna Clean Service" 
+              className="h-10 w-10 rounded-full object-cover border-2 border-white/80 shadow-md bg-white"
+            />
+            <span className={`text-xl sm:text-2xl font-black tracking-tight ${scrolled ? 'text-blue-600' : 'text-white drop-shadow-md'}`}>
               Anna Clean Service
             </span>
           </a>

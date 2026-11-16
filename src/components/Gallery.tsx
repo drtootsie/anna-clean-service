@@ -6,10 +6,11 @@ import { Sparkles, CheckCircle2, Camera } from 'lucide-react';
 const SHOWCASE_ITEMS = [
   {
     id: 1,
-    image: '/gallery/FullSizeRender-1.jpeg',
-    title: 'Sparkling Kitchen Refresh',
+    image: '/gallery/nextdoor/post2.jpeg',
+    title: 'Sparkling Kitchen & Counter Reset',
     category: 'Kitchen',
-    detail: 'Degreased range, sanitized countertops, polished fixtures & spotless sink',
+    detail: 'Degreased range, sanitized quartz/granite, polished fixtures & spotless sink',
+    badge: 'Nextdoor Client Home',
   },
   {
     id: 2,
@@ -17,13 +18,15 @@ const SHOWCASE_ITEMS = [
     title: 'Pristine Bathroom Sanitation',
     category: 'Bathroom',
     detail: 'Gleaming mirrors, soap-scum free glass, disinfected vanity & tile',
+    badge: 'Anna Inspected',
   },
   {
     id: 3,
-    image: '/gallery/FullSizeRender-5.jpeg',
-    title: 'Living Room Reset',
+    image: '/gallery/nextdoor/post3.jpg',
+    title: 'Detailed Living Space Care',
     category: 'Living Area',
     detail: 'Hand-wiped baseboards, detailed dusting, and refreshed upholstery',
+    badge: 'Nextdoor Client Home',
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ const SHOWCASE_ITEMS = [
     title: 'Master Bedroom Sanity',
     category: 'Bedrooms',
     detail: 'Dust-free blinds, pristine furniture surfaces & crisp carpet lines',
+    badge: 'Anna Inspected',
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const SHOWCASE_ITEMS = [
     title: 'Streak-Free Hardwood Care',
     category: 'Floors',
     detail: 'High-filtration vacuuming followed by safe, streak-free damp mopping',
+    badge: 'Anna Inspected',
   },
   {
     id: 6,
@@ -45,6 +50,7 @@ const SHOWCASE_ITEMS = [
     title: 'Appliance & Surface Detail',
     category: 'Appliances',
     detail: 'Fingerprint-free stainless steel, polished stovetops & exterior cabinets',
+    badge: 'Anna Inspected',
   },
 ];
 
@@ -116,7 +122,7 @@ const Gallery = () => {
                 {/* Verified Clean Badge */}
                 <div className="absolute top-4 right-4 bg-emerald-600/90 backdrop-blur-md text-white font-bold text-xs px-2.5 py-1.5 rounded-full shadow-sm flex items-center gap-1">
                   <CheckCircle2 className="w-3 h-3" />
-                  <span>Anna Inspected</span>
+                  <span>{item.badge || 'Anna Inspected'}</span>
                 </div>
               </div>
 

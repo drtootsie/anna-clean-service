@@ -7,10 +7,10 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
           <div className="relative">
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+            <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <img 
-                src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
-                alt="Clean and organized home"
+                src="/gallery/nextdoor/post1.jpeg" 
+                alt="Anna Clean Service real home cleaning"
                 className="w-full h-full object-cover"
               />
             </div>
