@@ -160,7 +160,7 @@ const Checklist = () => {
                 href="#contact-standard"
                 className="inline-flex w-full items-center justify-center px-6 py-3 rounded-xl border-2 border-gray-300 font-bold text-gray-800 hover:bg-gray-200 transition-colors text-sm"
               >
-                Build Standard Clean Estimate ↓
+                Calculate Standard Clean Below ↓
               </a>
             </div>
           </div>
@@ -207,7 +207,7 @@ const Checklist = () => {
                 href="#contact-deep"
                 className="inline-flex w-full items-center justify-center px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold transition-colors text-sm shadow-md"
               >
-                Build Deep Clean Estimate ↓
+                Calculate Deep Clean Below ↓
               </a>
             </div>
           </div>

@@ -67,17 +67,17 @@ const Services = () => {
           ))}
         </div>
         
-        <div className="mt-16 p-8 bg-blue-600 rounded-2xl shadow-xl text-white">
+        <div className="mt-12 p-6 bg-white rounded-2xl border border-gray-200 shadow-sm">
           <div className="md:flex items-center justify-between text-left">
             <div>
-              <h3 className="text-2xl font-bold mb-2">Need a custom cleaning plan?</h3>
-              <p className="text-blue-100">Contact us today for a free estimate based on your specific requirements.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Not sure which clean your home needs?</h3>
+              <p className="text-gray-600 text-sm">Compare exactly what is included room-by-room in our Standard Maintenance vs. Deep Clean.</p>
             </div>
             <a
-              href="#contact"
-              className="mt-6 md:mt-0 inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors"
+              href="#checklist"
+              className="mt-4 md:mt-0 inline-flex items-center justify-center px-6 py-2.5 bg-blue-50 text-blue-700 font-bold text-sm rounded-xl hover:bg-blue-100 transition-colors border border-blue-200 flex-shrink-0"
             >
-              Get Free Estimate
+              View Room Checklist ↓
             </a>
           </div>
         </div>

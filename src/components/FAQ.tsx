@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import { ChevronDown, HelpCircle, PhoneCall } from 'lucide-react';
 
 const FAQS = [
@@ -22,7 +20,7 @@ const FAQS = [
   },
   {
     q: 'How do you determine the price for a clean?',
-    a: 'Our pricing is customized to your home size (bedrooms/bathrooms), square footage, condition, and cleaning frequency. We provide upfront, transparent estimates with zero hidden fees and no long-term contracts.'
+    a: 'Our pricing is customized to your home size (bedrooms/bathrooms), square footage, condition, and cleaning frequency. Use our instant estimate calculator above to get an upfront rate with zero hidden fees and no long-term contracts.'
   },
   {
     q: 'What areas in Kansas City do you serve?',
@@ -31,12 +29,6 @@ const FAQS = [
 ];
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <section id="faq" className="py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,33 +47,25 @@ const FAQ = () => {
         </div>
 
         <div className="space-y-4">
-          {FAQS.map((faq, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <div 
-                key={index}
-                className="border border-gray-200 rounded-2xl overflow-hidden transition-all duration-200"
-              >
-                <button
-                  type="button"
-                  onClick={() => toggle(index)}
-                  className="w-full py-5 px-6 text-left flex justify-between items-center bg-gray-50/50 hover:bg-gray-50 transition-colors focus:outline-none"
-                >
-                  <span className="font-bold text-gray-900 text-base sm:text-lg pr-4">
-                    {faq.q}
-                  </span>
-                  <div className={`h-8 w-8 rounded-full flex items-center justify-center bg-white border border-gray-200 text-blue-600 transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180 bg-blue-50 border-blue-200' : ''}`}>
-                    <ChevronDown className="w-4 h-4" />
-                  </div>
-                </button>
-                {isOpen && (
-                  <div className="px-6 pb-6 pt-2 bg-white text-gray-600 text-sm sm:text-base leading-relaxed border-t border-gray-100">
-                    {faq.a}
-                  </div>
-                )}
+          {FAQS.map((faq, index) => (
+            <details
+              key={index}
+              open={index === 0}
+              className="group border border-gray-200 rounded-2xl overflow-hidden transition-all bg-white open:bg-blue-50/20"
+            >
+              <summary className="w-full py-5 px-6 text-left flex justify-between items-center bg-gray-50/50 hover:bg-gray-50 cursor-pointer list-none select-none transition-colors">
+                <span className="font-bold text-gray-900 text-base sm:text-lg pr-4">
+                  {faq.q}
+                </span>
+                <div className="h-8 w-8 rounded-full flex items-center justify-center bg-white border border-gray-200 text-blue-600 transition-transform duration-200 flex-shrink-0 group-open:rotate-180 group-open:bg-blue-50 group-open:border-blue-200">
+                  <ChevronDown className="w-4 h-4" />
+                </div>
+              </summary>
+              <div className="px-6 pb-6 pt-3 bg-white text-gray-600 text-sm sm:text-base leading-relaxed border-t border-gray-100">
+                {faq.a}
               </div>
-            );
-          })}
+            </details>
+          ))}
         </div>
 
         {/* Quick Help Box */}

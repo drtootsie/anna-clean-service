@@ -169,7 +169,11 @@ const ContactForm = () => {
   const smsUrl = `sms:9137317373?&body=${encodeURIComponent(getSummaryText())}`;
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-white to-blue-50/50">
+    <section id="contact" className="py-24 bg-gradient-to-b from-white to-blue-50/50 relative scroll-mt-20">
+      <div id="contact-standard" className="absolute -top-20" />
+      <div id="contact-deep" className="absolute -top-20" />
+      <div id="contact-move" className="absolute -top-20" />
+      <div id="contact-organize" className="absolute -top-20" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
