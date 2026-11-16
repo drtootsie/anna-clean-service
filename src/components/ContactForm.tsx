@@ -582,13 +582,13 @@ const ContactForm = () => {
                 </a>
 
                 <a
-                  href="mailto:anna.clean.service@gmail.com"
+                  href="mailto:annacleanservice3@gmail.com"
                   className="flex items-center p-3 rounded-2xl bg-white/10 hover:bg-white/20 transition-all text-sm font-semibold"
                 >
                   <Mail className="w-5 h-5 mr-3 text-blue-200" />
                   <div>
                     <div className="text-[11px] text-blue-200 uppercase tracking-wider">Email Inquiries</div>
-                    <div className="text-xs font-bold truncate">anna.clean.service@gmail.com</div>
+                    <div className="text-xs font-bold truncate">annacleanservice3@gmail.com</div>
                   </div>
                 </a>
 

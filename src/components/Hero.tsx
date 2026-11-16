@@ -19,13 +19,17 @@ const Hero = () => {
         <div className="max-w-3xl">
           
           {/* Trust Badge Top */}
-          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/30 backdrop-blur-md text-blue-200 text-xs sm:text-sm font-semibold mb-6">
+          <div className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/20 border border-blue-400/30 backdrop-blur-md text-blue-200 text-xs sm:text-sm font-semibold mb-6">
+            <span className="text-emerald-300 font-bold flex items-center">
+              🏆 2025 Nextdoor Neighborhood Favorite
+            </span>
+            <span className="text-blue-300">•</span>
             <div className="flex text-amber-400">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} size={14} fill="currentColor" />
               ))}
             </div>
-            <span className="text-white font-bold">5.0 Star Rated</span>
+            <span className="text-white font-bold">5.0 Star</span>
             <span className="text-blue-300">•</span>
             <span>Overland Park & Greater KC</span>
           </div>

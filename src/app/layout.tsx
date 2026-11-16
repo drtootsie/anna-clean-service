@@ -36,7 +36,7 @@ const jsonLd = {
   "@type": "HouseCleaningService",
   "name": "Anna Clean Service",
   "telephone": "+1-913-731-7373",
-  "email": "anna.clean.service@gmail.com",
+  "email": "annacleanservice3@gmail.com",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Kansas City",
