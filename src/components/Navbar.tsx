@@ -3,6 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Menu, X, Sparkles } from 'lucide-react';
 
+const InstagramIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+  </svg>
+);
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -59,6 +67,20 @@ const Navbar = () => {
 
           {/* Action CTAs */}
           <div className="hidden md:flex items-center space-x-3">
+            <a
+              href="https://instagram.com/anna_cleanser"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Anna Clean Service on Instagram"
+              className={`inline-flex items-center justify-center p-2 rounded-xl transition-all ${
+                scrolled 
+                ? 'text-gray-700 hover:text-pink-600 bg-gray-100 hover:bg-pink-50' 
+                : 'text-white bg-white/15 hover:bg-white/25 hover:text-pink-300 backdrop-blur-sm'
+              }`}
+            >
+              <InstagramIcon className="w-4 h-4" />
+            </a>
+
             <a
               href="tel:9137317373"
               className={`inline-flex items-center px-3.5 py-2 text-sm font-bold rounded-xl transition-all ${
@@ -134,6 +156,16 @@ const Navbar = () => {
             >
               <Phone className="w-4 h-4 mr-2 text-blue-600" />
               Call / Text: (913) 731-7373
+            </a>
+            
+            <a
+              href="https://instagram.com/anna_cleanser"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full inline-flex items-center justify-center px-4 py-3 bg-pink-50 text-pink-700 font-bold rounded-xl text-sm border border-pink-200 hover:bg-pink-100 transition-colors"
+            >
+              <InstagramIcon className="w-4 h-4 mr-2" />
+              Follow on Instagram (@anna_cleanser)
             </a>
           </div>
         </div>

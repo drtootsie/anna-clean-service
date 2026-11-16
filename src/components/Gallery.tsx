@@ -1,55 +1,79 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Sparkles, CheckCircle2, Camera } from 'lucide-react';
+import { Sparkles, CheckCircle2, Camera, ExternalLink } from 'lucide-react';
+
+const InstagramIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+  </svg>
+);
 
 const SHOWCASE_ITEMS = [
   {
     id: 1,
     image: '/gallery/nextdoor/post2.jpeg',
-    title: 'Sparkling Kitchen & Counter Reset',
+    title: 'Gleaming Kitchen & Countertop Reset',
     category: 'Kitchen',
-    detail: 'Degreased range, sanitized quartz/granite, polished fixtures & spotless sink',
-    badge: 'Nextdoor Client Home',
+    detail: 'Sanitized granite/quartz, degreased stovetop, polished backsplash & fixtures',
+    badge: 'Nextdoor Featured',
   },
   {
     id: 2,
-    image: '/gallery/FullSizeRender-3.jpeg',
-    title: 'Pristine Bathroom Sanitation',
-    category: 'Bathroom',
-    detail: 'Gleaming mirrors, soap-scum free glass, disinfected vanity & tile',
+    image: '/gallery/curated/IMG_0313.jpg',
+    title: 'Open-Concept Living & Dining Refresh',
+    category: 'Living Area',
+    detail: 'Detailed dusting, hand-cleaned baseboards, and pristine natural-light surfaces',
     badge: 'Anna Inspected',
   },
   {
     id: 3,
-    image: '/gallery/nextdoor/post3.jpg',
-    title: 'Detailed Living Space Care',
-    category: 'Living Area',
-    detail: 'Hand-wiped baseboards, detailed dusting, and refreshed upholstery',
-    badge: 'Nextdoor Client Home',
+    image: '/gallery/curated/IMG_0316.jpg',
+    title: 'Pristine Bathroom Tile & Vanity',
+    category: 'Bathroom',
+    detail: 'Streak-free mirrors, sanitized sinks, soap-scum elimination & polished chrome',
+    badge: 'Anna Inspected',
   },
   {
     id: 4,
-    image: '/gallery/FullSizeRender-7.jpeg',
-    title: 'Master Bedroom Sanity',
-    category: 'Bedrooms',
-    detail: 'Dust-free blinds, pristine furniture surfaces & crisp carpet lines',
+    image: '/gallery/curated/IMG_0595.jpg',
+    title: 'Immaculate Hardwood & Living Area',
+    category: 'Floors',
+    detail: 'HEPA vacuumed and streak-free damp mopped hardwood for a deep, healthy shine',
     badge: 'Anna Inspected',
   },
   {
     id: 5,
-    image: '/gallery/FullSizeRender-9.jpeg',
-    title: 'Streak-Free Hardwood Care',
-    category: 'Floors',
-    detail: 'High-filtration vacuuming followed by safe, streak-free damp mopping',
-    badge: 'Anna Inspected',
+    image: '/gallery/nextdoor/post3.jpg',
+    title: 'Cozy Family Room Deep Detail',
+    category: 'Living Area',
+    detail: 'Under-cushion vacuuming, lint removal, window sills & dust-free shelving',
+    badge: 'Nextdoor Featured',
   },
   {
     id: 6,
-    image: '/gallery/FullSizeRender-11.jpeg',
-    title: 'Appliance & Surface Detail',
-    category: 'Appliances',
-    detail: 'Fingerprint-free stainless steel, polished stovetops & exterior cabinets',
+    image: '/gallery/curated/IMG_0600.jpg',
+    title: 'Sunlit Kitchen Island & Cabinetry',
+    category: 'Kitchen',
+    detail: 'Wiped cabinet faces, polished stainless steel range, and sanitized countertops',
+    badge: 'Anna Inspected',
+  },
+  {
+    id: 7,
+    image: '/gallery/curated/IMG_0317.jpg',
+    title: 'Master Suite Sanity & Bedroom Reset',
+    category: 'Bedrooms',
+    detail: 'Crisp bed presentation, furniture polish, vacuumed corners & fresh air feeling',
+    badge: 'Anna Inspected',
+  },
+  {
+    id: 8,
+    image: '/gallery/curated/IMG_0598.jpg',
+    title: 'Great Room & Hardwood Transition',
+    category: 'Floors',
+    detail: 'Precision vacuum edging, baseboards wiped clean, zero residue left behind',
     badge: 'Anna Inspected',
   },
 ];
@@ -71,13 +95,13 @@ const Gallery = () => {
         <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-bold tracking-wider uppercase mb-3">
             <Camera className="w-3.5 h-3.5" />
-            <span>Real Homes Cleaned by Anna</span>
+            <span>Authentic Work in Kansas City Homes</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
             Our Work & Real Results
           </h2>
           <p className="mt-4 text-base sm:text-lg text-gray-600">
-            Every home is cleaned with authentic attention to detail, hospital-grade care, and gentle, non-toxic products.
+            Every home is personally cleaned and inspected by Anna to guarantee hospital-grade sanitization and gentle, pet-safe care.
           </p>
 
           {/* Category Filter Pills */}
@@ -100,7 +124,7 @@ const Gallery = () => {
         </div>
 
         {/* Image Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredItems.map((item) => (
             <div 
               key={item.id}
@@ -115,24 +139,24 @@ const Gallery = () => {
                   loading="lazy"
                 />
                 {/* Category Pill */}
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md text-blue-900 font-bold text-xs px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5">
+                <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-blue-900 font-bold text-[11px] px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1">
                   <Sparkles className="w-3 h-3 text-blue-600" />
                   <span>{item.category}</span>
                 </div>
                 {/* Verified Clean Badge */}
-                <div className="absolute top-4 right-4 bg-emerald-600/90 backdrop-blur-md text-white font-bold text-xs px-2.5 py-1.5 rounded-full shadow-sm flex items-center gap-1">
+                <div className="absolute top-3 right-3 bg-emerald-600/90 backdrop-blur-md text-white font-bold text-[11px] px-2.5 py-1 rounded-full shadow-sm flex items-center gap-1">
                   <CheckCircle2 className="w-3 h-3" />
-                  <span>{item.badge || 'Anna Inspected'}</span>
+                  <span>{item.badge}</span>
                 </div>
               </div>
 
               {/* Card Content */}
-              <div className="p-6 flex-1 flex flex-col justify-between">
+              <div className="p-5 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="font-extrabold text-gray-900 text-lg mb-2 group-hover:text-blue-600 transition-colors">
+                  <h3 className="font-extrabold text-gray-900 text-base mb-1.5 group-hover:text-blue-600 transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 text-xs leading-relaxed">
                     {item.detail}
                   </p>
                 </div>
@@ -141,8 +165,33 @@ const Gallery = () => {
           ))}
         </div>
 
+        {/* Instagram Follow Callout */}
+        <div className="mt-12 p-6 bg-gradient-to-r from-pink-50 via-purple-50 to-blue-50 border border-pink-200/60 rounded-3xl flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-4 shadow-sm">
+          <div className="flex items-center gap-4">
+            <div className="h-12 w-12 rounded-2xl bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-600 text-white flex items-center justify-center flex-shrink-0 shadow-md">
+              <InstagramIcon className="w-6 h-6" />
+            </div>
+            <div>
+              <h4 className="font-extrabold text-gray-900 text-base">Follow Anna on Instagram</h4>
+              <p className="text-gray-600 text-xs sm:text-sm mt-0.5">
+                Catch recent Kansas City home transformations, before-and-after reels, and weekly cleaning tips.
+              </p>
+            </div>
+          </div>
+          <a
+            href="https://instagram.com/anna_cleanser"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-5 py-2.5 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-bold text-xs sm:text-sm transition-all shadow-sm flex-shrink-0"
+          >
+            <InstagramIcon className="w-4 h-4 mr-2" />
+            <span>@anna_cleanser</span>
+            <ExternalLink className="w-3.5 h-3.5 ml-1.5 opacity-80" />
+          </a>
+        </div>
+
         {/* Quality Guarantee Banner */}
-        <div className="mt-16 bg-white border border-blue-100 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-6">
+        <div className="mt-8 bg-white border border-blue-100 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-6">
           <div className="flex items-center gap-4">
             <div className="h-12 w-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0">
               <CheckCircle2 className="w-6 h-6" />
