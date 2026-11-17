@@ -26,7 +26,7 @@ const SHOWCASE_ITEMS = [
     title: 'Open-Concept Living & Dining Refresh',
     category: 'Living Area',
     detail: 'Detailed dusting, hand-cleaned baseboards, and pristine natural-light surfaces',
-    badge: 'Anna Inspected',
+    badge: 'Ana Inspected',
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const SHOWCASE_ITEMS = [
     title: 'Pristine Bathroom Tile & Vanity',
     category: 'Bathroom',
     detail: 'Streak-free mirrors, sanitized sinks, soap-scum elimination & polished chrome',
-    badge: 'Anna Inspected',
+    badge: 'Ana Inspected',
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const SHOWCASE_ITEMS = [
     title: 'Immaculate Hardwood & Living Area',
     category: 'Floors',
     detail: 'HEPA vacuumed and streak-free damp mopped hardwood for a deep, healthy shine',
-    badge: 'Anna Inspected',
+    badge: 'Ana Inspected',
   },
   {
     id: 5,
@@ -58,7 +58,7 @@ const SHOWCASE_ITEMS = [
     title: 'Sunlit Kitchen Island & Cabinetry',
     category: 'Kitchen',
     detail: 'Wiped cabinet faces, polished stainless steel range, and sanitized countertops',
-    badge: 'Anna Inspected',
+    badge: 'Ana Inspected',
   },
   {
     id: 7,
@@ -66,7 +66,7 @@ const SHOWCASE_ITEMS = [
     title: 'Master Suite Sanity & Bedroom Reset',
     category: 'Bedrooms',
     detail: 'Crisp bed presentation, furniture polish, vacuumed corners & fresh air feeling',
-    badge: 'Anna Inspected',
+    badge: 'Ana Inspected',
   },
   {
     id: 8,
@@ -74,7 +74,7 @@ const SHOWCASE_ITEMS = [
     title: 'Great Room & Hardwood Transition',
     category: 'Floors',
     detail: 'Precision vacuum edging, baseboards wiped clean, zero residue left behind',
-    badge: 'Anna Inspected',
+    badge: 'Ana Inspected',
   },
 ];
 
@@ -101,7 +101,7 @@ const Gallery = () => {
             Our Work & Real Results
           </h2>
           <p className="mt-4 text-base sm:text-lg text-gray-600">
-            Every home is personally cleaned and inspected by Anna to guarantee hospital-grade sanitization and gentle, pet-safe care.
+            Every home is personally cleaned and inspected by Ana to guarantee hospital-grade sanitization and gentle, pet-safe care.
           </p>
 
           {/* Category Filter Pills */}
@@ -172,7 +172,7 @@ const Gallery = () => {
               <InstagramIcon className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="font-extrabold text-gray-900 text-base">Follow Anna on Instagram</h4>
+              <h4 className="font-extrabold text-gray-900 text-base">Follow Ana on Instagram</h4>
               <p className="text-gray-600 text-xs sm:text-sm mt-0.5">
                 Catch recent Kansas City home transformations, before-and-after reels, and weekly cleaning tips.
               </p>
@@ -199,7 +199,7 @@ const Gallery = () => {
             <div>
               <h4 className="font-bold text-gray-900 text-base sm:text-lg">100% Owner-Inspected Guarantee</h4>
               <p className="text-gray-600 text-xs sm:text-sm mt-0.5">
-                Anna personally cleans or inspects every home to ensure nothing is overlooked.
+                Ana personally cleans or inspects every home to ensure nothing is overlooked.
               </p>
             </div>
           </div>

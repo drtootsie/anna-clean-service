@@ -101,7 +101,7 @@ const ContactForm = () => {
     const serviceName = SERVICE_TYPES.find(s => s.id === service)?.name || service;
     const freqName = FREQUENCIES.find(f => f.id === frequency)?.label || frequency;
     const addonsList = selectedAddons.map(id => ADD_ONS.find(a => a.id === id)?.label).filter(Boolean).join(', ');
-    return `Anna Clean Service Quote Request:
+    return `Ana Clean Service Quote Request:
 • Service: ${serviceName}
 • Home: ${bedrooms} Bed(s), ${bathrooms} Bath(s)
 • Frequency: ${freqName}
@@ -186,7 +186,7 @@ const ContactForm = () => {
             Book Your Free Estimate
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Tell us about your home. Anna will review your layout and send a tailored quote with guaranteed pricing within 1-2 hours.
+            Tell us about your home. Ana will review your layout and send a tailored quote with guaranteed pricing within 1-2 hours.
           </p>
         </div>
 
@@ -206,13 +206,13 @@ const ContactForm = () => {
                   Thank You, {name || 'Neighbor'}!
                 </h3>
                 <p className="text-gray-600 max-w-md mx-auto mb-6 leading-relaxed">
-                  Anna has received your {bedrooms} bed / {bathrooms} bath cleaning request and will follow up shortly at <strong className="text-gray-900">{phone || '(913) 731-7373'}</strong> with your free quote.
+                  Ana has received your {bedrooms} bed / {bathrooms} bath cleaning request and will follow up shortly at <strong className="text-gray-900">{phone || '(913) 731-7373'}</strong> with your free quote.
                 </p>
 
                 <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6 max-w-md mx-auto mb-8 text-left">
                   <p className="text-xs font-bold uppercase tracking-wider text-blue-800 mb-2">Need an immediate answer?</p>
                   <p className="text-sm text-blue-900 mb-4">
-                    Send your quote directly to Anna via text message for priority scheduling!
+                    Send your quote directly to Ana via text message for priority scheduling!
                   </p>
                   <a
                     href={smsUrl}
@@ -509,7 +509,7 @@ const ContactForm = () => {
                     )}
                   </button>
                   <p className="mt-3 text-center text-xs text-gray-500">
-                    🔒 100% Free & No Obligation. Anna personally reviews every inquiry within 1-2 hours.
+                    🔒 100% Free & No Obligation. Ana personally reviews every inquiry within 1-2 hours.
                   </p>
                 </div>
 
@@ -578,7 +578,7 @@ const ContactForm = () => {
             <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-6 text-white shadow-xl">
               <h3 className="text-lg font-bold mb-2">Prefer to Talk or Text?</h3>
               <p className="text-blue-100 text-xs mb-6 leading-relaxed">
-                Call or text Anna directly. We're happy to answer questions, discuss custom requirements, or give an estimate over the phone.
+                Call or text Ana directly. We're happy to answer questions, discuss custom requirements, or give an estimate over the phone.
               </p>
               
               <div className="space-y-4">
@@ -614,7 +614,7 @@ const ContactForm = () => {
               </div>
             </div>
 
-            {/* The Anna Clean Service Guarantee */}
+            {/* The Ana Clean Service Guarantee */}
             <div className="bg-white rounded-3xl p-6 shadow-md border border-gray-100 space-y-4">
               <div className="flex items-center space-x-3">
                 <div className="h-10 w-10 rounded-xl bg-green-100 text-green-700 flex items-center justify-center flex-shrink-0">

@@ -42,11 +42,11 @@ const Navbar = () => {
           <a href="#" className="flex-shrink-0 flex items-center space-x-3">
             <img 
               src="/gallery/nextdoor/logo.jpeg" 
-              alt="Anna Clean Service" 
+              alt="Ana Clean Service" 
               className="h-10 w-10 rounded-full object-cover border-2 border-white/80 shadow-md bg-white"
             />
             <span className={`text-xl sm:text-2xl font-black tracking-tight ${scrolled ? 'text-blue-600' : 'text-white drop-shadow-md'}`}>
-              Anna Clean Service
+              Ana Clean Service
             </span>
           </a>
           
@@ -71,7 +71,7 @@ const Navbar = () => {
               href="https://instagram.com/anna_cleanser"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Anna Clean Service on Instagram"
+              aria-label="Ana Clean Service on Instagram"
               className={`inline-flex items-center justify-center p-2 rounded-xl transition-all ${
                 scrolled 
                 ? 'text-gray-700 hover:text-pink-600 bg-gray-100 hover:bg-pink-50' 

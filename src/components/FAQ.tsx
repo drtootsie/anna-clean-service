@@ -72,7 +72,7 @@ const FAQ = () => {
         <div className="mt-12 p-6 rounded-2xl bg-blue-50 border border-blue-100 flex flex-col sm:flex-row items-center justify-between text-center sm:text-left gap-4">
           <div>
             <h4 className="font-bold text-blue-900 text-base">Have a specific question not listed here?</h4>
-            <p className="text-xs sm:text-sm text-blue-700 mt-0.5">Call or text Anna directly—we respond quickly to all questions.</p>
+            <p className="text-xs sm:text-sm text-blue-700 mt-0.5">Call or text Ana directly—we respond quickly to all questions.</p>
           </div>
           <a
             href="tel:9137317373"

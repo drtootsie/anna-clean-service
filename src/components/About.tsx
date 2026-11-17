@@ -10,7 +10,7 @@ const About = () => {
             <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
               <img 
                 src="/gallery/nextdoor/post1.jpeg" 
-                alt="Anna Clean Service real home cleaning"
+                alt="Ana Clean Service real home cleaning"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -29,10 +29,10 @@ const About = () => {
               A Trusted Partner for a Fresh, Pristine Home
             </h2>
             <p className="mt-6 text-base sm:text-lg text-gray-600 leading-relaxed">
-              Anna Clean Service is dedicated to creating a spotless, fresh, and comfortable living environment for families across Greater Kansas City. We help you save time and eliminate stress so you can relax in a healthy sanctuary.
+              Ana Clean Service is dedicated to creating a spotless, fresh, and comfortable living environment for families across Greater Kansas City. We help you save time and eliminate stress so you can relax in a healthy sanctuary.
             </p>
             <p className="mt-4 text-base sm:text-lg text-gray-600 leading-relaxed">
-              Unlike large franchises that send different unfamiliar faces each week, Anna personally oversees and cleans your residence. Our work is defined by dependability, meticulous attention to detail, and hospital-grade sanitization using family- and pet-safe products.
+              Unlike large franchises that send different unfamiliar faces each week, Ana personally oversees and cleans your residence. Our work is defined by dependability, meticulous attention to detail, and hospital-grade sanitization using family- and pet-safe products.
             </p>
             
             <div className="mt-10 space-y-6">

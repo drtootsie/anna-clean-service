@@ -44,7 +44,7 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p className="text-lg sm:text-xl text-blue-100/90 mb-8 max-w-2xl leading-relaxed">
-            Experience the peace of mind that comes from a spotless home. Anna personally cleans and inspects every residence with hospital-grade thoroughness and gentle, eco-friendly care.
+            Experience the peace of mind that comes from a spotless home. Ana personally cleans and inspects every residence with hospital-grade thoroughness and gentle, eco-friendly care.
           </p>
 
           {/* Call to Actions */}

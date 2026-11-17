@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Anna Clean Service | Professional House Cleaning in Kansas City & Overland Park",
+  title: "Ana Clean Service | Professional House Cleaning in Kansas City & Overland Park",
   description: "Exceptional thoroughness and authentic clean. Professional residential, deep cleaning, move-in/out, and space organization in Overland Park, Leawood, Prairie Village, and Greater Kansas City.",
   keywords: [
     "house cleaning Kansas City",
@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     "deep cleaning Leawood",
     "residential cleaners Prairie Village",
     "move out cleaning KC",
-    "Anna Clean Service"
+    "Ana Clean Service"
   ],
   openGraph: {
-    title: "Anna Clean Service | Professional House Cleaning in Kansas City",
+    title: "Ana Clean Service | Professional House Cleaning in Kansas City",
     description: "Exceptional thoroughness, authentic clean. Owner-operated residential house cleaning across Overland Park & Greater KC.",
     type: "website",
     locale: "en_US",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "HouseCleaningService",
-  "name": "Anna Clean Service",
+  "name": "Ana Clean Service",
   "telephone": "+1-913-731-7373",
   "email": "annacleanservice3@gmail.com",
   "address": {

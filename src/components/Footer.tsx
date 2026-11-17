@@ -28,9 +28,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           
           <div className="col-span-1 md:col-span-2">
-            <span className="text-2xl font-black text-blue-400 mb-4 block">Anna Clean Service</span>
+            <span className="text-2xl font-black text-blue-400 mb-4 block">Ana Clean Service</span>
             <p className="text-gray-400 max-w-sm mb-6 leading-relaxed text-sm">
-              More than just cleaning houses, Anna Clean Service is dedicated to caring for your space, ensuring an impeccable environment that brings comfort and peace to your family across Greater Kansas City.
+              More than just cleaning houses, Ana Clean Service is dedicated to caring for your space, ensuring an impeccable environment that brings comfort and peace to your family across Greater Kansas City.
             </p>
             <div className="flex items-center space-x-3">
               <a 
@@ -98,7 +98,7 @@ const Footer = () => {
         </div>
         
         <div className="pt-8 border-t border-gray-800/80 flex flex-col sm:flex-row justify-between items-center text-gray-500 text-xs gap-4">
-          <p>© {new Date().getFullYear()} Anna Clean Service. 2025 Nextdoor Neighborhood Favorite Award Winner.</p>
+          <p>© {new Date().getFullYear()} Ana Clean Service. 2025 Nextdoor Neighborhood Favorite Award Winner.</p>
           <p>Licensed & Insured Residential House Cleaning across Greater Kansas City.</p>
         </div>
       </div>
