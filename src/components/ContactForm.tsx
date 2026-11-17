@@ -119,7 +119,7 @@ const ContactForm = () => {
     setIsSubmitting(true);
     setErrorMessage('');
     
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_ACCESS_KEY_HERE";
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "301830f0-194f-4d2e-915a-6122ab4e8078";
     const summary = getSummaryText();
 
     const formData = new FormData();
@@ -138,7 +138,7 @@ const ContactForm = () => {
     formData.append("full_quote_summary", summary);
 
     try {
-      if (accessKey === "YOUR_ACCESS_KEY_HERE") {
+      if (!accessKey || accessKey === "YOUR_ACCESS_KEY_HERE") {
         // If no access key is configured yet in env, simulate clean success or direct fallback
         await new Promise(resolve => setTimeout(resolve, 800));
         setIsSubmitted(true);
